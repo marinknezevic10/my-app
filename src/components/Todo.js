@@ -1,9 +1,12 @@
 import React from "react";
+import "../index.css";
 
-function Todo() {
+//sending parametar props on todo function
+//curly braces {} executes js code
+function Todo(props) {
   return (
     <div className="card">
-      <h2>Title</h2>
+      <h2>{props.text}</h2>
       <div className="actions">
         <button className="btn">DELETE</button>
       </div>
