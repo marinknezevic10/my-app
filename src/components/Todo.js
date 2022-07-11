@@ -15,12 +15,11 @@ import Backdrop from "./Backdrop";
 //sending parametar props on todo function
 //curly braces {} executes js code
 
-
 //we use this {modalIsOpen ? <Modal/> : null} because we want to display this function only if its clicked otherwise it will be shown all the time
 //if the modalisopen is true I render the modal if its not I dont render anything
 //{modalIsOpen && <Modal/>} IF BOTH CONDITIONS ARE TRUE THEN SECOND VALUE WILL BE RENDERED
 function Todo(props) {
- const = [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function Delete() {
     setModalIsOpen(true);
@@ -34,9 +33,8 @@ function Todo(props) {
           DELETE
         </button>
       </div>
-      {modalIsOpen && <Modal/>}
-       {modalIsOpen && <Backdrop/>}
-      
+      {modalIsOpen && <Modal />}
+      {modalIsOpen && <Backdrop />}
     </div>
   );
 }
