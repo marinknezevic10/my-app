@@ -25,6 +25,11 @@ function Todo(props) {
     setModalIsOpen(true);
   }
 
+  //this function allows us to click on a backdrop to close modal
+  function closeModal() {
+    setModalIsOpen(false);
+  }
+
   return (
     <div className="card">
       <h2>{props.text}</h2>
@@ -34,7 +39,7 @@ function Todo(props) {
         </button>
       </div>
       {modalIsOpen && <Modal />}
-      {modalIsOpen && <Backdrop />}
+      {modalIsOpen && <Backdrop onClick={closeModal} />}
     </div>
   );
 }
